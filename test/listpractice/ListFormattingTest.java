@@ -61,6 +61,12 @@ class ListFormattingTest {
             ListFormatting.formatGrammatically(
                 List.of("bread", "garlic", "chocolate", "funny hats")));
 
+        // https://xkcd.com/851/
+        assertEquals(
+            "na, na, na and na",
+            ListFormatting.formatGrammatically(
+                List.of("na", "na", "na", "na")));
+
         assertEquals("", ListFormatting.formatGrammatically(List.of()));
     }
 
@@ -85,6 +91,11 @@ class ListFormattingTest {
             "bread, garlic, chocolate, and funny hats",
             ListFormatting.formatGrammaticallyWithOxfordComma(
                 List.of("bread", "garlic", "chocolate", "funny hats")));
+
+        assertEquals(
+            "na, na, na, and na",
+            ListFormatting.formatGrammaticallyWithOxfordComma(
+                List.of("na", "na", "na", "na")));
 
         assertEquals("", ListFormatting.formatGrammaticallyWithOxfordComma(List.of()));
     }
